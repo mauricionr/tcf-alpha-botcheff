@@ -147,6 +147,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver opções",
                                     payload: "ITEMMENU_1",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
                                 }]
                             },
                             {
@@ -158,6 +163,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver opções",
                                     payload: "ITEMMENU_2",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
                                 }]
                             },
                             {
@@ -169,6 +179,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver opções",
                                     payload: "ITEMMENU_3",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
                                 }]
                             },
                             {
@@ -180,6 +195,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver opções",
                                     payload: "ITEMMENU_4",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
                                 }]
                             },
                             {
@@ -191,6 +211,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver opções",
                                     payload: "ITEMMENU_5",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
                                 }]
                             }
                         ]
