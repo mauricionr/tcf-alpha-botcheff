@@ -1,6 +1,7 @@
 module.exports = {
     saudacao:"Olá!",
     questao:"O que voce quer comer?",
+    agradecimentos:"Obrigado por utilizar BotChef",
     categorias:{
         PIZZA,
         JAPONESA,
