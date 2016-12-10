@@ -1,6 +1,6 @@
 module.exports = {
     "appSecret": "07e60b4581bc50eaae1e4eed5449e075",
-    "pageAccessToken": "EAAFd8BpSnYUBALWZAh41bwsGPJmq7DgCzZB5q1ijn9PMWGvxsfzqosL9JxfDg3RyUMXdPXT6UzZA3fjQoZA7nZBZBytqRn7rWczlDi4MHYM7MEav3MEycWE6LvmoRZAlS3oZAr6JVqaMZAOmQZAxvT4qWAhOqjduHBMScdmtVRfRJWHwZDZD",
+    "pageAccessToken": "EAAFd8BpSnYUBAPUFfBeOZAvqout3PFYnvkR7JNUAnrQHFN7BV1quUuathHYTnssCyXWGn6RhN8k2QzlQQ75XU0MbkIY7Wi4zkmFgH11wxyHCzfuRV0bSoBNembaThwBWDyhRVcPyiNYIif5Fj21ZAPY3wKM56charb15VqFwZDZD",
     "validationToken": "",
     "serverURL": "https://arcane-falls-74877.herokuapp.com/"
 }

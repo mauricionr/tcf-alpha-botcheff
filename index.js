@@ -28,7 +28,6 @@ app.get('/webhook/', function (req, res) {
 	res.send('Error, wrong token')
 })
 
-// to post data
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
 	for (let i = 0; i < messaging_events.length; i++) {
@@ -40,7 +39,8 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+			sendTextMessage(sender, `Olá ${event.sender.first_name}`)
+            sendTextMessage(sender, `O que gostaria de comer?`)
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -52,8 +52,7 @@ app.post('/webhook/', function (req, res) {
 })
 
 function sendTextMessage(sender, text) {
-	let messageData = { text:text }
-	
+	let messageData = { text:text }	
 	request({
 		url: 'https://graph.facebook.com/v2.6/me/messages',
 		qs: {access_token:token},
