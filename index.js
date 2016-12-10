@@ -11,10 +11,10 @@ app.get('/', function(req, res) {
 app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
-  
-function receivedMessage(event) {
-  // Putting a stub for now, we'll expand it in the following steps
-  console.log("Message data: ", event.message);
-}
+
+app.get('/webhook', function (req, res) {
+    res.sendStatus(200);
+});
+
 
 app.listen(process.env.PORT || 8080);
