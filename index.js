@@ -36,9 +36,9 @@ app.post('/webhook/', function (req, res) {
         console.log(JSON.stringify(event))
 
 		if (event.message && event.message.text) {
-			actions.categorias(event.recipient.id)
-            actions.ordem(event.recipient.id)
-            actions.restaurantes(event.recipient.id)
+			actions.categorias(sender)
+            actions.ordem(sender)
+            actions.restaurantes(sender)
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
