@@ -12,39 +12,30 @@ app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.get('/', function (req, res) {
-	res.send('hello world i am a secret bot')
-})
-
-// for facebook verification
-app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
-		res.send(req.query['hub.challenge'])
-	}
-	res.send('Error, wrong token')
-})
-
 app.post('/webhook/', function (req, res) {
-	let messaging_events = req.body.entry[0].messaging
-    
-    console.log('Body: ', JSON.stringify(req.body))
-
+	let messaging_events = req.body.entry[0].messaging    
+    console.log('Body: \n', JSON.stringify(req.body))
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
-		let sender = event.sender.id
-
-        console.log(JSON.stringify(event))
-
+		let sender = event.sender.id        
 		if (event.message && event.message.text) {
 			callSendAPI(actions.categorias(sender))
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
-			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+            let currentStep = event.postback.payload.split('_')[0];
+			switch(currentStep){
+                case actions.contants.CATEGORIA:
+                    callSendAPI(actions.ordem(sender));
+                break;
+                case actions.contants.ORDEM:
+                    callSendAPI(actions.restaurantes(sender))
+                break;
+            }
 			continue
 		}
 	}
-	res.sendStatus(200)
+	res.sendStatus(200);
 })
 
 
@@ -74,6 +65,18 @@ function callSendAPI(messageData) {
     }
   });  
 }
+
+app.get('/', function (req, res) {
+	res.send('hello world i am a secret bot')
+})
+
+// for facebook verification
+app.get('/webhook/', function (req, res) {
+	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
+		res.send(req.query['hub.challenge'])
+	}
+	res.send('Error, wrong token')
+})
 
 // spin spin sugar
 app.listen(app.get('port'), function() {

@@ -1,8 +1,13 @@
 const config = require('./default.js')
 const SERVER_URL = config.serverURL;
+
+const contants = {
+    CATEGORIA:'CATEGORIA',
+    ORDEM:'ORDEM'
+}
+
 module.exports = {
-    saudacao:"Olá!",
-    questao:"O que voce quer comer?",
+    contants:contants,
     agradecimentos:"Obrigado por utilizar BotChef",
     categorias(recipientId){
         return {
@@ -19,17 +24,17 @@ module.exports = {
                                 {
                                     type: "postback",
                                     title: "Pizza",
-                                    payload: "PIZZA"
+                                    payload: "CATEGORIA_PIZZA"
                                 },
                                 {
                                     type: "postback",
                                     title: "Lanches",
-                                    payload: "LANCHE"
+                                    payload: "CATEGORIA_LANCHE"
                                 },
                                 {
                                     type: "postback",
                                     title: "Japonesa",
-                                    payload: "JAPONESA"
+                                    payload: "CATEGORIA_JAPONESA"
                                 }
                         ]
                     }
@@ -40,24 +45,31 @@ module.exports = {
     ordem(recipientId){
         return {
             recipient: {
-                id: recipientId
+                 id: recipientId
             },
             message: {
                 attachment: {
                     type: "template",
                     payload: {
-                    template_type: "generic",
-                    elements: [{
-                            title: "touch",
-                            subtitle: "Your Hands, Now in VR",
-                            item_url: "https://www.oculus.com/en-us/touch/",               
-                            image_url: SERVER_URL + "/assets/touch.png",
-                            buttons: [{
-                                type: "postback",
-                                title: "Call Postback",
-                                payload: "Payload for second bubble",
-                            }]
-                        }]
+                    template_type: "button",
+                    text: "Como deseja buscar?",
+                    buttons:[
+                                {
+                                    type: "postback",
+                                    title: "Preço",
+                                    payload: "ORDEM_PRECO"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Localização",
+                                    payload: "ORDEM_LOCALIZACAO"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Recomendação",
+                                    payload: "ORDEM_RECOMENDACAO"
+                                }
+                        ]
                     }
                 }
             }
