@@ -12,7 +12,7 @@ const contants = {
 module.exports = {
     contants:contants,
     agradecimentos:"Obrigado por utilizar BotChef",
-    sendTextMessage(recipientId, messageText) {
+    textMessage(recipientId, messageText) {
         return {
             recipient: {
                 id: recipientId
