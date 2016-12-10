@@ -38,6 +38,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Japonesa",
                                     payload: "CATEGORIA_JAPONESA"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "INICIO_"
                                 }
                         ]
                     }
