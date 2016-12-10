@@ -92,6 +92,34 @@ module.exports = {
                                     payload: "INICIO_"
                                 }]
                             },
+                            {
+                                title: "Localização",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Ir",
+                                    payload: "ORDEM_LOCALIZACAO",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "INICIO_"
+                                }]
+                            },
+                            {
+                                title: "Avaliação",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Ir",
+                                    payload: "ORDEM_AVALIACAO",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "INICIO_"
+                                }]
+                            }
                         ]
                     }
                 }
