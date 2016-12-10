@@ -7,24 +7,31 @@ module.exports = {
     categorias(recipientId){
         return {
             recipient: {
-                id: recipientId
+                 id: recipientId
             },
             message: {
                 attachment: {
                     type: "template",
                     payload: {
-                    template_type: "generic",
-                    elements: [{
-                            title: "touch",
-                            subtitle: "Your Hands, Now in VR",
-                            item_url: "https://www.oculus.com/en-us/touch/",               
-                            image_url: SERVER_URL + "/assets/touch.png",
-                            buttons: [{
-                                type: "postback",
-                                title: "Call Postback",
-                                payload: "Payload for second bubble",
-                            }]
-                        }]
+                    template_type: "button",
+                    text: "O que deseja comer hoje?",
+                    buttons:[
+                                {
+                                    type: "postback",
+                                    title: "Pizza",
+                                    payload: "PIZZA"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Lanches",
+                                    payload: "LANCHE"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Japonesa",
+                                    payload: "JAPONESA"
+                                }
+                        ]
                     }
                 }
             }

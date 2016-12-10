@@ -37,8 +37,6 @@ app.post('/webhook/', function (req, res) {
 
 		if (event.message && event.message.text) {
 			callSendAPI(actions.categorias(sender))
-            callSendAPI(actions.ordem(sender))
-            callSendAPI(actions.restaurantes(sender))
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
