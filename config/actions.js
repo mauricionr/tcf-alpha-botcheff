@@ -35,11 +35,11 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Preço",               
+                                title: "Pizza",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Pizza",
+                                    title: "Ir",
                                     payload: "CATEGORIA_PIZZA"
                                 }]
                             },
@@ -65,7 +65,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Preço",
+                                    title: "Ir",
                                     payload: "ORDEM_PRECO",
                                 },
                                 {
