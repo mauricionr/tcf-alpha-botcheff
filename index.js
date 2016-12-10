@@ -26,6 +26,8 @@ app.get('/webhook/', function (req, res) {
 
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
+    console.log('Body: ', JSON.stringify(req.body))
+    
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
@@ -33,7 +35,7 @@ app.post('/webhook/', function (req, res) {
         console.log(JSON.stringify(event))
 
 		if (event.message && event.message.text) {
-			sendCategorias(event.sender.id)
+			
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -44,25 +46,7 @@ app.post('/webhook/', function (req, res) {
 	res.sendStatus(200)
 })
 
-function sendCategorias(recipientId) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    message: actions.categorias
-  };
-  return callSendAPI(messageData);
-}
 
-function sendRestaurantes(recipientId) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    message: actions.restaurantes
-  };
-  return callSendAPI(messageData);
-}
 
 /*
  * Call the Send API. The message data goes in the body. If successful, we'll 
