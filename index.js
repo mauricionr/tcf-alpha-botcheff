@@ -26,8 +26,9 @@ app.get('/webhook/', function (req, res) {
 
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging
-    console.log('Body: ', JSON.stringify(req.body))
     
+    console.log('Body: ', JSON.stringify(req.body))
+
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
@@ -35,7 +36,9 @@ app.post('/webhook/', function (req, res) {
         console.log(JSON.stringify(event))
 
 		if (event.message && event.message.text) {
-			
+			actions.categorias(event.recipient.id)
+            actions.ordem(event.recipient.id)
+            actions.restaurantes(event.recipient.id)
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -63,13 +66,10 @@ function callSendAPI(messageData) {
     if (!error && response.statusCode == 200) {
       var recipientId = body.recipient_id;
       var messageId = body.message_id;
-
       if (messageId) {
-        console.log("Successfully sent message with id %s to recipient %s", 
-          messageId, recipientId);
+        console.log("Successfully sent message with id %s to recipient %s", messageId, recipientId);
       } else {
-      console.log("Successfully called Send API for recipient %s", 
-        recipientId);
+      console.log("Successfully called Send API for recipient %s", recipientId);
       }
     } else {
       console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
