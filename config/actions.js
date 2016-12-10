@@ -43,6 +43,24 @@ module.exports = {
                                     payload: "CATEGORIA_PIZZA"
                                 }]
                             },
+                            {
+                                title: "Lanches",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Ir",
+                                    payload: "CATEGORIA_LANCHE"
+                                }]
+                            },
+                            {
+                                title: "Japonesa",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Ir",
+                                    payload: "CATEGORIA_JAPONESA"
+                                }]
+                            }
                         ]
                     }
                 }
