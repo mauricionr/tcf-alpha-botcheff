@@ -85,17 +85,41 @@ module.exports = {
                     type: "template",
                     payload: {
                     template_type: "generic",
-                    elements: [{
-                            title: "touch",
-                            subtitle: "Your Hands, Now in VR",
-                            item_url: "https://www.oculus.com/en-us/touch/",               
-                            image_url: SERVER_URL + "/assets/touch.png",
-                            buttons: [{
-                                type: "postback",
-                                title: "Call Postback",
-                                payload: "Payload for second bubble",
-                            }]
-                        }]
+                    elements: [
+                            {
+                                title: "touch",
+                                subtitle: "Your Hands, Now in VR 1",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Call Postback",
+                                    payload: "Payload for second bubble",
+                                }]
+                            },
+                            {
+                                title: "touch",
+                                subtitle: "Your Hands, Now in VR 2",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Call Postback",
+                                    payload: "Payload for second bubble",
+                                }]
+                            },
+                            {
+                                title: "touch",
+                                subtitle: "Your Hands, Now in VR 3",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Call Postback",
+                                    payload: "Payload for second bubble",
+                                }]
+                            }
+                        ]
                     }
                 }
             }
