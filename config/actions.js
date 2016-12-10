@@ -97,6 +97,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver menu",
                                     payload: "RESTAURANTE_1",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "CATEGORIA_"
                                 }]
                             },
                             {
@@ -108,6 +113,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver menu",
                                     payload: "RESTAURANTE_2",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "CATEGORIA_"
                                 }]
                             },
                             {
@@ -119,6 +129,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver menu",
                                     payload: "RESTAURANTE_3",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "CATEGORIA_"
                                 }]
                             }
                         ]
