@@ -4,7 +4,8 @@
   "description": "Bot for orders",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [
     "bot",
@@ -12,5 +13,11 @@
     "platform"
   ],
   "author": "Mauricio Reis, Richard, Patricia, Paulo, Denise",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.0",
+    "config": "^1.20.4",
+    "request": "^2.72.0"
+  }
 }
