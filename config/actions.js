@@ -12,33 +12,37 @@ const contants = {
 module.exports = {
     contants:contants,
     agradecimentos:"Obrigado por utilizar BotChef",
+    sendTextMessage(recipientId, messageText) {
+        return {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                text: messageText,
+                metadata: "INFO_METADATA"
+            }
+        };
+    },
     categorias(recipientId){
         return {
             recipient: {
-                 id: recipientId
+                id: recipientId
             },
             message: {
                 attachment: {
                     type: "template",
                     payload: {
-                    template_type: "button",
-                    text: "O que deseja comer hoje?",
-                    buttons:[
-                                {
+                    template_type: "generic",
+                    elements: [
+                            {
+                                title: "Preço",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
                                     type: "postback",
                                     title: "Pizza",
                                     payload: "CATEGORIA_PIZZA"
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Lanches",
-                                    payload: "CATEGORIA_LANCHE"
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Japonesa",
-                                    payload: "CATEGORIA_JAPONESA"
-                                }
+                                }]
+                            },
                         ]
                     }
                 }
@@ -55,7 +59,6 @@ module.exports = {
                     type: "template",
                     payload: {
                     template_type: "generic",
-                    text:'Como deseja buscar?',
                     elements: [
                             {
                                 title: "Preço",               
