@@ -55,6 +55,7 @@ module.exports = {
                     type: "template",
                     payload: {
                     template_type: "generic",
+                    text:'Como deseja buscar?',
                     elements: [
                             {
                                 title: "Preço",               
