@@ -209,17 +209,62 @@ module.exports = {
                     type: "template",
                     payload: {
                     template_type: "generic",
-                    elements: [{
-                            title: "touch",
-                            subtitle: "Your Hands, Now in VR",
-                            item_url: "https://www.oculus.com/en-us/touch/",               
-                            image_url: SERVER_URL + "/assets/touch.png",
-                            buttons: [{
-                                type: "postback",
-                                title: "Call Postback",
-                                payload: "Payload for second bubble",
-                            }]
-                        }]
+                    elements: [
+                            {
+                                title: "Produto Title",
+                                subtitle: "Produto subtitle",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [
+                                    {
+                                        type: "postback",
+                                        title: "Adicionar ao carrinho",
+                                        payload: "ADDPRODUTO_1",
+                                    },
+                                    {
+                                        type: "postback",
+                                        title: "Voltar ao menu",
+                                        payload: "RESTAURANTE_1",
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Produto 2 Title",
+                                subtitle: "Produto 2 subtitle",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [
+                                    {
+                                        type: "postback",
+                                        title: "Adicionar ao carrinho",
+                                        payload: "ADDPRODUTO_2",
+                                    },
+                                    {
+                                        type: "postback",
+                                        title: "Voltar ao menu",
+                                        payload: "RESTAURANTE_1",
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Produto 3 Title",
+                                subtitle: "Produto 3 subtitle",
+                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [
+                                    {
+                                        type: "postback",
+                                        title: "Adicionar ao carrinho",
+                                        payload: "ADDPRODUTO_3",
+                                    },
+                                    {
+                                        type: "postback",
+                                        title: "Voltar ao menu",
+                                        payload: "RESTAURANTE_1",
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 }
             }
