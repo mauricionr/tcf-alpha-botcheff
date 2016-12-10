@@ -5,7 +5,8 @@ const contants = {
     CATEGORIA:'CATEGORIA',
     ORDEM:'ORDEM',
     RESTAURANTE:'RESTAURANTE',
-    ITEMMENU:'ITEMMENU'
+    ITEMMENU:'ITEMMENU',
+    INICIO:'INICIO'
 }
 
 module.exports = {
@@ -37,6 +38,11 @@ module.exports = {
                                     type: "postback",
                                     title: "Japonesa",
                                     payload: "CATEGORIA_JAPONESA"
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "INICIO_"
                                 }
                         ]
                     }

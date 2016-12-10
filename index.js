@@ -27,6 +27,9 @@ app.post('/webhook/', function (req, res) {
 			let text = JSON.stringify(event.postback)
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
+                case actions.contants.INICIO:
+                    callSendAPI(actions.categorias(sender))
+                break;
                 case actions.contants.CATEGORIA:
                     callSendAPI(actions.ordem(sender));
                 break;
