@@ -8,6 +8,8 @@ const config = require('./config/default.js')
 const token = process.env.PAGE_ACCESS_TOKEN || config.pageAccessToken;
 const actions = require('./config/actions.js'); 
 
+const users = {};
+
 app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
@@ -30,6 +32,12 @@ app.post('/webhook/', function (req, res) {
                 break;
                 case actions.contants.ORDEM:
                     callSendAPI(actions.restaurantes(sender))
+                break;
+                case actions.contants.RESTAURANTE:
+                    callSendAPI(actions.menu(sender))
+                break;
+                case actions.contants.ITEMMENU:
+                    callSendAPI(actions.produtos(sender))
                 break;
             }
 			continue
