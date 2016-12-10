@@ -1,0 +1,16 @@
+{
+  "name": "hackathon-std",
+  "version": "1.0.0",
+  "description": "Bot for orders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "messenger",
+    "platform"
+  ],
+  "author": "Mauricio Reis, Richard, Patricia, Paulo, Denise",
+  "license": "ISC"
+}
