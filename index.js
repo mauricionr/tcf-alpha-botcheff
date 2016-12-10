@@ -6,6 +6,7 @@ const request = require('request')
 const app = express()
 const config = require('./config/default.js')
 const token = process.env.PAGE_ACCESS_TOKEN || config.pageAccessToken;
+const actions = require('./config/actions.js'); 
 
 app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -29,12 +30,7 @@ app.post('/webhook/', function (req, res) {
 		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
-			let text = event.message.text
-			if (text === 'Generic') {
-				sendGenericMessage(sender)
-				continue
-			}
-            sendTextMessage(sender, `Olá, o que gostaria de comer?`)
+			sendCategorias(event.sender.id)
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -45,72 +41,53 @@ app.post('/webhook/', function (req, res) {
 	res.sendStatus(200)
 })
 
-function sendTextMessage(sender, text) {
-	let messageData = { text:text }	
-	request({
-		url: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {access_token:token},
-		method: 'POST',
-		json: {
-			recipient: {id:sender},
-			message: messageData,
-		}
-	}, function(error, response, body) {
-		if (error) {
-			console.log('Error sending messages: ', error)
-		} else if (response.body.error) {
-			console.log('Error: ', response.body.error)
-		}
-	})
+function sendCategorias(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: actions.categorias
+  };
+  return callSendAPI(messageData);
 }
 
-function sendGenericMessage(sender) {
-	let messageData = {
-		"attachment": {
-			"type": "template",
-			"payload": {
-				"template_type": "generic",
-				"elements": [{
-					"title": "First card",
-					"subtitle": "Element #1 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					"buttons": [{
-						"type": "web_url",
-						"url": "https://www.messenger.com",
-						"title": "web url"
-					}, {
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
-					}],
-				}, {
-					"title": "Second card",
-					"subtitle": "Element #2 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-					"buttons": [{
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for second element in a generic bubble",
-					}],
-				}]
-			}
-		}
-	}
-	request({
-		url: 'https://graph.facebook.com/v2.6/me/messages',
-		qs: {access_token:token},
-		method: 'POST',
-		json: {
-			recipient: {id:sender},
-			message: messageData,
-		}
-	}, function(error, response, body) {
-		if (error) {
-			console.log('Error sending messages: ', error)
-		} else if (response.body.error) {
-			console.log('Error: ', response.body.error)
-		}
-	})
+function sendRestaurantes(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: actions.restaurantes
+  };
+  return callSendAPI(messageData);
+}
+
+/*
+ * Call the Send API. The message data goes in the body. If successful, we'll 
+ * get the message id in a response 
+ *
+ */
+function callSendAPI(messageData) {
+  return request({
+    uri: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: { access_token: token },
+    method: 'POST',
+    json: messageData
+  }, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      var recipientId = body.recipient_id;
+      var messageId = body.message_id;
+
+      if (messageId) {
+        console.log("Successfully sent message with id %s to recipient %s", 
+          messageId, recipientId);
+      } else {
+      console.log("Successfully called Send API for recipient %s", 
+        recipientId);
+      }
+    } else {
+      console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
+    }
+  });  
 }
 
 // spin spin sugar
