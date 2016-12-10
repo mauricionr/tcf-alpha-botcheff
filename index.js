@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, `Olá ${event.sender.first_name}`)
+			sendTextMessage(sender, `Olá ${JSON.stringify(event.sender)}`)
             sendTextMessage(sender, `O que gostaria de comer?`)
 		}
 		if (event.postback) {
