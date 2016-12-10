@@ -48,30 +48,28 @@ module.exports = {
     ordem(recipientId){
         return {
             recipient: {
-                 id: recipientId
+                id: recipientId
             },
             message: {
                 attachment: {
                     type: "template",
                     payload: {
-                    template_type: "button",
-                    text: "Como deseja buscar?",
-                    buttons:[
-                                {
+                    template_type: "generic",
+                    elements: [
+                            {
+                                title: "Preço",               
+                                image_url: SERVER_URL + "/assets/touch.png",
+                                buttons: [{
                                     type: "postback",
                                     title: "Preço",
-                                    payload: "ORDEM_PRECO"
+                                    payload: "ORDEM_PRECO",
                                 },
                                 {
                                     type: "postback",
-                                    title: "Localização",
-                                    payload: "ORDEM_LOCALIZACAO"
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Recomendação",
-                                    payload: "ORDEM_RECOMENDACAO"
-                                }
+                                    title: "Voltar",
+                                    payload: "INICIO_"
+                                }]
+                            },
                         ]
                     }
                 }
