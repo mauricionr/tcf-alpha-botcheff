@@ -40,7 +40,7 @@
             $("#process-payment-btn").attr("disabled", "disabled");
             // Generate a card token & handle the response
             SimplifyCommerce.generateToken({
-                key: "YOUR_PUBLIC_KEY",
+                key: "sbpb_MGMyNzFiOWEtMTFiZi00ZmM0LTkwOWUtZTc1OGFkMmMzOTFj",
                 card: {
                     number: $("#cc-number").val(),
                     cvc: $("#cc-cvc").val(),
@@ -51,7 +51,7 @@
             // Prevent the form from submitting
             return false;
         });
-        SimplifyCommerce.addMasterPassCheckoutButton("buy-with-masterpass-div", "YOUR_PUBLIC_KEY", masterPassResponseHandler,
+        SimplifyCommerce.addMasterPassCheckoutButton("buy-with-masterpass-div", "sbpb_MGMyNzFiOWEtMTFiZi00ZmM0LTkwOWUtZTc1OGFkMmMzOTFj", masterPassResponseHandler,
             masterPassCanceledHandler);
     });
 })(jQuery)

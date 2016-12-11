@@ -7,7 +7,7 @@ const app = express()
 const config = require('./config/default.js')
 const token = process.env.PAGE_ACCESS_TOKEN || config.pageAccessToken;
 const actions = require('./config/actions.js'); 
-
+const path = require('path')
 const users = {};
 const carrinho = 'carrinho';
 
@@ -128,7 +128,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/masterpass', function(req, res) {
-	res.send('hello world i am a secret bot')
+    res.sendFile(path.join(__dirname, './', 'masterpass.html'))
 })
 
 app.post('/simplify_auth', function(req, res) {
