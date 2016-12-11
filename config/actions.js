@@ -373,7 +373,7 @@ module.exports = {
                         "template_type":"receipt",
                         "recipient_name":"Richard casarin",
                         "order_number":"12345678902",
-                        "currency":"BR",
+                        "currency":"USD",
                         "payment_method":"Master 2345",        
                         "order_url":"",
                         "timestamp":"1428444852", 
@@ -383,7 +383,7 @@ module.exports = {
                                 "subtitle":"Lombo defumado, pimentões, cebola e catupiry legítimo.",
                                 "quantity":1,
                                 "price":50,
-                                "currency":"BR",
+                                "currency":"USD",
                                 "image_url":SERVER_URL + "/assets/pizza1.jpg"
                             }
                         ],
