@@ -1,6 +1,5 @@
 (function($){
     function simplifyResponseHandler(data) {
-        debugger
         var $paymentForm = $("#simplify-payment-form");
         // Remove all previous errors
         $(".error").remove();
@@ -32,7 +31,6 @@
         }
     }
     function masterPassResponseHandler(data, status) {
-        debugger
         var $paymentForm = $("#simplify-payment-form");
         // Remove all previous errors
         $(".error").remove();
@@ -53,6 +51,7 @@
             }
         } else {
             debugger
+            console.log(data)
             // The token contains id, last4, and card type
             var token = data.cardToken["id"];
             // Insert the token into the form so it gets submitted to the server
