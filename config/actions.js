@@ -352,7 +352,7 @@ module.exports = {
                                         "type":"web_url",
                                         "url":"https://arcane-falls-74877.herokuapp.com/masterpass",
                                         "title":"Efetuar pagamento",
-                                        "webview_height_ratio": "compact"
+                                        "webview_height_ratio": "full"
                                     }
                                 ]
                             }                            
@@ -387,7 +387,7 @@ module.exports = {
                                         "type":"web_url",
                                         "url":"https://arcane-falls-74877.herokuapp.com/masterpass",
                                         "title":"Efetuar pagamento",
-                                        "webview_height_ratio": "compact"
+                                        "webview_height_ratio": "full"
                                     }
                                 ]
                             }                            
