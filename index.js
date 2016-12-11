@@ -70,7 +70,9 @@ app.post('/webhook/', function (req, res) {
                     })
                 break
                 case actions.constants.VIEW_CART:
-                    callSendAPI(actions.carrinho(sender))
+                    callSendAPI(actions.textMessage(sender, 'Aqui estão seus pedidos!')).then(() => {
+                        callSendAPI(actions.carrinho(sender))
+                    })
                 break;
             }
 			continue
