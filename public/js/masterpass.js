@@ -59,7 +59,7 @@
             // Submit the form to the server
             $("#cc-number").val("XXXX-XXXX-XXXX-" + data.cardToken.card.last4);
             $("#cc-number").prop('disabled', true);
-            $paymentForm.after("<div class='confirmation'>Please confirm your payment details before submitting</div>");
+            //$paymentForm.after("<div class='confirmation'>Please confirm your payment details before submitting</div>");
         }
     }
 
