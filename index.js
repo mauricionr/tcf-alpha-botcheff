@@ -123,8 +123,12 @@ function callSendAPI(messageData) {
     })  
 }
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
 	res.send('hello world i am a secret bot')
+})
+
+app.post('/simplify_auth', function(req, res) {
+    res.sendStatus(200)
 })
 
 // for facebook verification
