@@ -350,8 +350,8 @@ module.exports = {
                                     },
                                     {
                                         "type":"web_url",
-                                        "url":"https://petersfancyapparel.com/criteria_selector",
-                                        "title":"Efetuar o pagamento",
+                                        "url":"https://google.com",
+                                        "title":"Efetuar pagamento",
                                         "webview_height_ratio": "compact"
                                     }
                                 ]
@@ -385,8 +385,8 @@ module.exports = {
                                     },
                                     {
                                         "type":"web_url",
-                                        "url":"https://petersfancyapparel.com/criteria_selector",
-                                        "title":"Efetuar o pagamento",
+                                        "url":"https://google.com",
+                                        "title":"Efetuar pagamento",
                                         "webview_height_ratio": "compact"
                                     }
                                 ]
