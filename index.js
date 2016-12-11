@@ -81,6 +81,9 @@ app.post('/webhook/', function (req, res) {
                         })
                     })
                 break;
+                case actions.constants.BUY_PRODUCTS:
+                    callSendAPI(actions.checkout(sender));
+                break;
             }
 			continue
 		}
