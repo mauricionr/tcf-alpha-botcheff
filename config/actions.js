@@ -6,7 +6,8 @@ const contants = {
     ORDEM:'ORDEM',
     RESTAURANTE:'RESTAURANTE',
     ITEMMENU:'ITEMMENU',
-    INICIO:'INICIO'
+    INICIO:'INICIO',
+    ADDPRODUTO:'ADDPRODUTO'
 }
 
 module.exports = {
@@ -312,7 +313,7 @@ module.exports = {
                                     },
                                     {
                                         type: "postback",
-                                        title: "Voltar ao menu",
+                                        title: "Voltar",
                                         payload: "RESTAURANTE_1",
                                     }
                                 ]
@@ -330,7 +331,7 @@ module.exports = {
                                     },
                                     {
                                         type: "postback",
-                                        title: "Voltar ao menu",
+                                        title: "Voltar",
                                         payload: "RESTAURANTE_1",
                                     }
                                 ]
@@ -348,7 +349,7 @@ module.exports = {
                                     },
                                     {
                                         type: "postback",
-                                        title: "Voltar ao menu",
+                                        title: "Voltar",
                                         payload: "RESTAURANTE_1",
                                     }
                                 ]
