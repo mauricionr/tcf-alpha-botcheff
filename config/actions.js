@@ -122,7 +122,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/respizza.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver categorias",
+                                    title: "Ver menu",
                                     payload: "RESTAURANTE_1",
                                 },
                                 {
@@ -137,7 +137,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/respizza2.jpg",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver categorias",
+                                    title: "Ver menu",
                                     payload: "RESTAURANTE_2",
                                 },
                                 {
@@ -152,7 +152,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/respizza3.jpg",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver categorias",
+                                    title: "Ver menu",
                                     payload: "RESTAURANTE_3",
                                 },
                                 {
