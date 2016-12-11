@@ -74,6 +74,13 @@ app.post('/webhook/', function (req, res) {
                         callSendAPI(actions.carrinho(sender))
                     })
                 break;
+                case actions.constants.REMOVEPRODUTO:
+                    callSendAPI(actions.textMessage(sender, 'Ok, seu item foi removido do carrinho!')).then(() => {
+                        callSendAPI(actions.textMessage(sender, 'Continue comprando ou acesse o menu lateral para finalizar a compra.')).then(() => {
+                            callSendAPI(actions.produtos(sender))
+                        })
+                    })
+                break;
             }
 			continue
 		}

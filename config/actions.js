@@ -9,7 +9,8 @@ const constants = {
     INICIO:'INICIO',
     ADDPRODUTO:'ADDPRODUTO',
     CHAT:'CHAT',
-    VIEW_CART:'VIEW'
+    VIEW_CART:'VIEW',
+    REMOVEPRODUTO:'REMOVEPRODUTO'
 }
 
 module.exports = {
@@ -343,8 +344,8 @@ module.exports = {
                                 buttons: [
                                     {
                                         type: "postback",
-                                        title: "Adicionar ao carrinho",
-                                        payload: "ADDPRODUTO_1",
+                                        title: "Remover do carrinho",
+                                        payload: "REMOVEPRODUTO_1",
                                     },
                                     {
                                         type: "postback",
@@ -354,32 +355,6 @@ module.exports = {
                                 ]
                             }                            
                         ]
-                    }
-                }
-            }
-        }
-    },
-    tipo_ordem(recipientId){
-        return {
-            recipient: {
-                id: recipientId
-            },
-            message: {
-                attachment: {
-                    type: "template",
-                    payload: {
-                    template_type: "generic",
-                    elements: [{
-                            title: "touch",
-                            subtitle: "Your Hands, Now in VR",
-                            item_url: "https://www.oculus.com/en-us/touch/",               
-                            image_url: SERVER_URL + "/assets/touch.png",
-                            buttons: [{
-                                type: "postback",
-                                title: "Call Postback",
-                                payload: "Payload for second bubble",
-                            }]
-                        }]
                     }
                 }
             }
