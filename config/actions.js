@@ -12,7 +12,7 @@ const constants = {
 }
 
 module.exports = {
-    contants:contants,
+    constants:constants,
     agradecimentos:"Obrigado por utilizar BotChef",
     textMessage(recipientId, messageText) {
         return {
