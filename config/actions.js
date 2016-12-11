@@ -47,7 +47,7 @@ module.exports = {
                             },
                             {
                                 title: "Lanches",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/lanche1.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "É isso mesmo",
@@ -56,7 +56,7 @@ module.exports = {
                             },
                             {
                                 title: "Japonesa",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/barco.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "É isso mesmo",
