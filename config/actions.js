@@ -1,7 +1,7 @@
 const config = require('./default.js')
 const SERVER_URL = config.serverURL;
 
-const contants = {
+const constants = {
     CATEGORIA:'CATEGORIA',
     ORDEM:'ORDEM',
     RESTAURANTE:'RESTAURANTE',

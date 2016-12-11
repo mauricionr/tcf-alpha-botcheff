@@ -1,6 +1,6 @@
 curl -X POST -H "Content-Type: application/json" -d '{
   "setting_type":"greeting",
   "greeting":{
-    "text":"Olá meu querido! Hum, imagino que esteja faminto e estou aqui para ajudar ;)"
+    "text":"Eu sou o BotCheff, posso te auxiliar a encontrar um lugar legal para comer em qualquer Shopping perto de você."
   }
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAFd8BpSnYUBAPUFfBeOZAvqout3PFYnvkR7JNUAnrQHFN7BV1quUuathHYTnssCyXWGn6RhN8k2QzlQQ75XU0MbkIY7Wi4zkmFgH11wxyHCzfuRV0bSoBNembaThwBWDyhRVcPyiNYIif5Fj21ZAPY3wKM56charb15VqFwZDZD"

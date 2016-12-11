@@ -36,31 +36,33 @@ app.post('/webhook/', function (req, res) {
 			let text = JSON.stringify(event.postback)
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
-                case actions.constans.CHAT:
+                case actions.constants.CHAT:
                     callSendAPI(actions.textMessage(sender, 'Entendi, aguarde que nosso pessoal ira entrar em contato em instantes, Obrigado'))
                 break;
-                case actions.contants.INICIO:
-                    callSendAPI(actions.textMessage(sender, 'O que você quer comer hoje?')).then(() => {
-                        callSendAPI(actions.categorias(sender))
+                case actions.constants.INICIO:
+                    callSendAPI(actions.textMessage(sender, 'Olá meu querido! Hum, imagino que esteja faminto e estou aqui para ajudar ;).')).then(() => {
+                        callSendAPI(actions.textMessage(sender, 'O que você quer comer hoje?')).then(() => {
+                            callSendAPI(actions.categorias(sender))
+                        })
                     })
                 break;
-                case actions.contants.CATEGORIA:
+                case actions.constants.CATEGORIA:
                     callSendAPI(actions.textMessage(sender, 'Ótimo, já vou dar as opções. Mas antes, como você prefere que eu liste?')).then(() => {
                         callSendAPI(actions.ordem(sender));
                     })
                 break;
-                case actions.contants.ORDEM:
+                case actions.constants.ORDEM:
                     callSendAPI(actions.textMessage(sender, 'Perfeito! Aqui estão as opções:')).then(() => {
                         callSendAPI(actions.restaurantes(sender))
                     })
                 break;
-                case actions.contants.RESTAURANTE:
+                case actions.constants.RESTAURANTE:
                     callSendAPI(actions.menu(sender))
                 break;
                 case actions.contants.ITEMMENU:
                     callSendAPI(actions.produtos(sender))
                 break;
-                case actions.contants.ADDPRODUTO:
+                case actions.constants.ADDPRODUTO:
                     callSendAPI(actions.textMessage(sender, 'Ok, seu item foi adicionado ao carrinho!')).then(() => {
                         callSendAPI(actions.textMessage(sender, 'Continue comprando ou acesse o menu lateral para finalizar a compra.')).then(() => {
                             callSendAPI(actions.produtos(sender))
