@@ -179,6 +179,21 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
+                                title: "Pizzas",
+                                subtitle:'Pizzas. Um sabor melhor que o outro, você irá se surpreender',
+                                image_url: SERVER_URL + "/assets/pizza5.jpg",
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Ver menu",
+                                    payload: "ITEMMENU_4",
+                                },
+                                {
+                                    type: "postback",
+                                    title: "Voltar",
+                                    payload: "ORDEM_PRECO"
+                                }]
+                            },
+                            {
                                 title: "Aperitivos",
                                 subtitle:'Experimente nosso breadsticks!',                                
                                 image_url: SERVER_URL + "/assets/aperitivo.jpg",
@@ -216,21 +231,6 @@ module.exports = {
                                     type: "postback",
                                     title: "Ver menu",
                                     payload: "ITEMMENU_3",
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Voltar",
-                                    payload: "ORDEM_PRECO"
-                                }]
-                            },
-                            {
-                                title: "Pizzas",
-                                subtitle:'Pizzas. Um sabor melhor que o outro, você irá se surpreender',
-                                image_url: SERVER_URL + "/assets/pizza5.jpg",
-                                buttons: [{
-                                    type: "postback",
-                                    title: "Ver menu",
-                                    payload: "ITEMMENU_4",
                                 },
                                 {
                                     type: "postback",
