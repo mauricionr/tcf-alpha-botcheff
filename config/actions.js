@@ -222,7 +222,7 @@ module.exports = {
                             },
                             {
                                 title: "Pizzas",
-                                subtitle:'Um sabor melhor que o outro. Você não vai se arrepender!',
+                                subtitle:'Pizzas. Um sabor melhor que o outro, você irá se surpreender',
                                 image_url: SERVER_URL + "/assets/pizza5.jpg",
                                 buttons: [{
                                     type: "postback",
