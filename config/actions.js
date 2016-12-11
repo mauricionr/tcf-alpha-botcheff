@@ -131,7 +131,7 @@ module.exports = {
                             {
                                 title: "Restaurante 2",
                                 subtitle: "Rua xpto 312321",
-                                image_url: SERVER_URL + "/assets/pizza2.jpg",
+                                image_url: SERVER_URL + "/assets/respizza2.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",
@@ -146,7 +146,7 @@ module.exports = {
                             {
                                 title: "Restaurante 3",
                                 subtitle: "Rua xpto 4344",
-                                image_url: SERVER_URL + "/assets/pizza3.jpg",
+                                image_url: SERVER_URL + "/assets/respizza3.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",

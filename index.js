@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
                 case actions.constants.RESTAURANTE:
                     callSendAPI(actions.menu(sender))
                 break;
-                case actions.contants.ITEMMENU:
+                case actions.constants.ITEMMENU:
                     callSendAPI(actions.produtos(sender))
                 break;
                 case actions.constants.ADDPRODUTO:
