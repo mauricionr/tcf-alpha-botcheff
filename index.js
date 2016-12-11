@@ -132,6 +132,7 @@ app.get('/masterpass', function(req, res) {
 })
 
 app.post('/simplify_auth', function(req, res) {
+    console.log('Auth callback from simplify_auth.......')
     res.sendStatus(200)
 })
 
