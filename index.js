@@ -36,6 +36,9 @@ app.post('/webhook/', function (req, res) {
 			let text = JSON.stringify(event.postback)
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
+                case actions.constans.CHAT:
+                    callSendAPI(actions.textMessage(sender, 'Entendi, aguarde que nosso pessoal ira entrar em contato em instantes, Obrigado'))
+                break;
                 case actions.contants.INICIO:
                     callSendAPI(actions.textMessage(sender, 'O que você quer comer hoje?')).then(() => {
                         callSendAPI(actions.categorias(sender))

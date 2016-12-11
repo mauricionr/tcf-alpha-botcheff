@@ -7,7 +7,8 @@ const contants = {
     RESTAURANTE:'RESTAURANTE',
     ITEMMENU:'ITEMMENU',
     INICIO:'INICIO',
-    ADDPRODUTO:'ADDPRODUTO'
+    ADDPRODUTO:'ADDPRODUTO',
+    CHAT:'CHAT'
 }
 
 module.exports = {
