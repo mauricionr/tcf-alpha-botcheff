@@ -9,7 +9,6 @@ const token = process.env.PAGE_ACCESS_TOKEN || config.pageAccessToken;
 const actions = require('./config/actions.js'); 
 
 const users = {};
-const carrinho = 'carrinho';
 
 app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -17,19 +16,17 @@ app.use(bodyParser.json())
 
 app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging    
-    
+    console.log('Body: \n', JSON.stringify(req.body))
 	for (let i = 0; i < messaging_events.length; i++) {
-		let event = req.body.entry[0].messaging[i]    
+		let event = req.body.entry[0].messaging[i]
 		let sender = event.sender.message_id
-        console.log('Sender: ', sender)
-
+             
 		if (event.message && event.message.text) {
             callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
                 callSendAPI(actions.categorias(sender))
             })
 		}
 		if (event.postback) {
-            console.log('Event: ', event);
 			let text = JSON.stringify(event.postback)
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
@@ -51,13 +48,6 @@ app.post('/webhook/', function (req, res) {
                 break;
                 case actions.contants.ITEMMENU:
                     callSendAPI(actions.produtos(sender))
-                break;
-                case actions.contants.ADDPRODUTO :
-                    users[sender][carrinho].push(event.payload)
-                    callSendAPI(actions.textMessage(sender, 'Item adicionado ao carrinho.'))
-                        .then(() => {
-                            callSendAPI(actions.produtos(sender))
-                        })
                 break;
             }
 			continue
