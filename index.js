@@ -55,6 +55,11 @@ app.post('/webhook/', function (req, res) {
                 case actions.contants.ITEMMENU:
                     callSendAPI(actions.produtos(sender))
                 break;
+                case actions.contants.ADDPRODUTO:
+                    callSendAPI(actions.textMessage(sender, 'Ok, seu item foi adicionado ao carrinho!')).then(() => {
+                        callSendAPI(actions.produtos(sender))
+                    })
+                break
             }
 			continue
 		}
