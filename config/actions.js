@@ -347,6 +347,11 @@ module.exports = {
                                         type: "postback",
                                         title: "Remover do carrinho",
                                         payload: "REMOVEPRODUTO_1",
+                                    },
+                                    {
+                                        type: "postback",
+                                        title: "Voltar",
+                                        payload: "RESTAURANTE_1",
                                     }
                                 ]
                             }                            
@@ -358,45 +363,36 @@ module.exports = {
     },
     checkout(recipientId){
         return {
-            "recipient":{
-                "id":recipientId
+            recipient: {
+                id: recipientId
             },
-            "message":{
-                "attachment":{
-                "type":"template",
-                    "payload":{
-                        "template_type":"receipt",
-                        "recipient_name":"Richard casarin",
-                        "order_number":"12345678902",
-                        "currency":"USD",
-                        "payment_method":"Master 2345",        
-                        "order_url":"",
-                        "timestamp":"1428444852", 
-                        "elements":[
+            message: {
+                attachment: {
+                    type: "template",
+                    payload: {
+                    template_type: "generic",
+                    elements: [
                             {
-                                "title":"Lombo defumado",
-                                "subtitle":"Lombo defumado, pimentões, cebola e catupiry legítimo.",
-                                "quantity":1,
-                                "price":50,
-                                "currency":"USD",
-                                "image_url":SERVER_URL + "/assets/pizza1.jpg"
-                            }
+                                title: "Lombo defumado",
+                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo.",
+                                image_url: SERVER_URL + "/assets/pizza1.jpg",
+                                buttons: [
+                                    {
+                                        type: "postback",
+                                        title: "Remover do carrinho",
+                                        payload: "REMOVEPRODUTO_1",
+                                    }
+                                ]
+                            }                            
                         ],
-                        "address":{
-                            "street_1":"Retirada no local",
-                            "street_2":"",
-                            "city":"São Paulo",
-                            "postal_code":"",
-                            "state":"SP",
-                            "country":"BR"
-                        },
-                        "summary":{
-                            "subtotal":75.00,
-                            "shipping_cost":4.95,
-                            "total_tax":6.19,
-                            "total_cost":56.14
-                        },
-                        "adjustments":[]
+                        "buttons":[
+                            {
+                                "type":"web_url",
+                                "url":"https://petersfancyapparel.com/criteria_selector",
+                                "title":"Select Criteria",
+                                "webview_height_ratio": "compact"
+                            }
+                        ]
                     }
                 }
             }
