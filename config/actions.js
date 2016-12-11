@@ -176,9 +176,8 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Aperitivos Title",
+                                title: "Aperitivos",
                                 subtitle: "Aperitivos subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -192,9 +191,8 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Bebidas Title",
+                                title: "Bebidas",
                                 subtitle: "Bebidas subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -208,9 +206,8 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Saladas Title",
-                                subtitle: "Saladas subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
+                                title: "Saladas",
+                                subtitle: "Saladas subtitle",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -224,9 +221,8 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Pratos Title",
+                                title: "Pizzas",
                                 subtitle: "Pratos subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -240,9 +236,8 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Sobremesa Title",
+                                title: "Sobremesas",
                                 subtitle: "Sobremesa subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -275,8 +270,7 @@ module.exports = {
                             {
                                 title: "Produto Title",
                                 subtitle: "Produto subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [
                                     {
                                         type: "postback",
@@ -293,8 +287,7 @@ module.exports = {
                             {
                                 title: "Produto 2 Title",
                                 subtitle: "Produto 2 subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/pizza2.jpg",
                                 buttons: [
                                     {
                                         type: "postback",
@@ -311,8 +304,7 @@ module.exports = {
                             {
                                 title: "Produto 3 Title",
                                 subtitle: "Produto 3 subtitle",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/pizza3.jpg",
                                 buttons: [
                                     {
                                         type: "postback",
