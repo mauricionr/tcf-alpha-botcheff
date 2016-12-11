@@ -115,7 +115,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Quero + Pizza",
-                                subtitle: "Rua xpto 32",
+                                subtitle: "Shopping Eldorado, Praça de Alimentação, 45",
                                 image_url: SERVER_URL + "/assets/respizza.png",
                                 buttons: [{
                                     type: "postback",
@@ -130,7 +130,7 @@ module.exports = {
                             },
                             {
                                 title: "Pizzaria Mamma Italia",
-                                subtitle: "Rua xpto 312321",
+                                subtitle: "Shopping Eldorado, Praça de Alimentação, 63",
                                 image_url: SERVER_URL + "/assets/respizza2.jpg",
                                 buttons: [{
                                     type: "postback",
@@ -145,7 +145,7 @@ module.exports = {
                             },
                             {
                                 title: "Pizzaria Firenze",
-                                subtitle: "Rua xpto 4344",
+                                subtitle: "Shopping Eldorado, Praça de Alimentação, 12",
                                 image_url: SERVER_URL + "/assets/respizza3.jpg",
                                 buttons: [{
                                     type: "postback",
@@ -176,8 +176,7 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Aperitivos",
-                                subtitle: "Aperitivos subtitle",
+                                title: "Aperitivos",                                
                                 image_url: SERVER_URL + "/assets/aperitivos.jpg",
                                 buttons: [{
                                     type: "postback",
@@ -192,7 +191,6 @@ module.exports = {
                             },
                             {
                                 title: "Bebidas",
-                                subtitle: "Bebidas subtitle",
                                 image_url: SERVER_URL + "/assets/drinks.png",
                                 buttons: [{
                                     type: "postback",
@@ -206,8 +204,7 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Saladas",
-                                subtitle: "Saladas subtitle",               
+                                title: "Saladas",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
