@@ -268,8 +268,8 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Produto Title",
-                                subtitle: "Produto subtitle",
+                                title: "Lombo defumado",
+                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo.",
                                 image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [
                                     {
@@ -285,8 +285,8 @@ module.exports = {
                                 ]
                             },
                             {
-                                title: "Produto 2 Title",
-                                subtitle: "Produto 2 subtitle",
+                                title: "Frango com Catupiry",
+                                subtitle: "Filé de frango desfiado temperado e catupity legítimo.",
                                 image_url: SERVER_URL + "/assets/pizza2.jpg",
                                 buttons: [
                                     {
@@ -302,8 +302,8 @@ module.exports = {
                                 ]
                             },
                             {
-                                title: "Produto 3 Title",
-                                subtitle: "Produto 3 subtitle",
+                                title: "Peperoni",
+                                subtitle: "Mussarela e fatias de peperoni Sadia.",
                                 image_url: SERVER_URL + "/assets/pizza4.jpg",
                                 buttons: [
                                     {
