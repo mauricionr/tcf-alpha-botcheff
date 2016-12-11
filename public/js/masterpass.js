@@ -6,6 +6,7 @@
         $(".error").remove();
         // Check for errors
         if (data.error) {
+            debugger
             // Show any validation errors
             if (data.error.code == "validation") {
                 var fieldErrors = data.error.fieldErrors,
@@ -21,6 +22,7 @@
             // Re-enable the submit button
             $("#process-payment-btn").removeAttr("disabled");
         } else {
+            debugger
             // The token contains id, last4, and card type
             var token = data["id"];
             // Insert the token into the form so it gets submitted to the server
@@ -36,6 +38,7 @@
         $(".error").remove();
         // Check for errors
         if (data.error) {
+            debugger
             // Show any validation errors
             if (data.error.code == "validation") {
                 var fieldErrors = data.error.fieldErrors,
@@ -49,6 +52,7 @@
                 $paymentForm.after(errorList);
             }
         } else {
+            debugger
             // The token contains id, last4, and card type
             var token = data.cardToken["id"];
             // Insert the token into the form so it gets submitted to the server
