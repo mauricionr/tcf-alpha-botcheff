@@ -142,8 +142,7 @@ module.exports = {
                             {
                                 title: "Restaurante 1",
                                 subtitle: "Rua xpto 32",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/resjapa.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",
@@ -158,8 +157,7 @@ module.exports = {
                             {
                                 title: "Restaurante 2",
                                 subtitle: "Rua xpto 312321",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/reslanches.png",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",
@@ -174,8 +172,7 @@ module.exports = {
                             {
                                 title: "Restaurante 3",
                                 subtitle: "Rua xpto 4344",
-                                item_url: "https://www.oculus.com/en-us/touch/",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/respizza.png",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",
