@@ -9,6 +9,7 @@ const token = process.env.PAGE_ACCESS_TOKEN || config.pageAccessToken;
 const actions = require('./config/actions.js'); 
 
 const users = {};
+const carrinho = 'carrinho';
 
 app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
@@ -19,7 +20,13 @@ app.post('/webhook/', function (req, res) {
     console.log('Body: \n', JSON.stringify(req.body))
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
-		let sender = event.sender.id        
+		let sender = event.sender.id
+        
+        users[sender] = users[sender] || {} 
+        users[sender][carrinho] = users[sender][carrinho] || []
+
+        console.log('Users : ', users)
+
 		if (event.message && event.message.text) {
             callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
                 callSendAPI(actions.categorias(sender))
