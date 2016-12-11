@@ -40,7 +40,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ir",
+                                    title: "É isso mesmo",
                                     payload: "CATEGORIA_PIZZA"
                                 }]
                             },
@@ -49,7 +49,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ir",
+                                    title: "É isso mesmo",
                                     payload: "CATEGORIA_LANCHE"
                                 }]
                             },
@@ -58,7 +58,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ir",
+                                    title: "É isso mesmo",
                                     payload: "CATEGORIA_JAPONESA"
                                 }]
                             }
