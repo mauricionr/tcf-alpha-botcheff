@@ -304,7 +304,7 @@ module.exports = {
                             {
                                 title: "Produto 3 Title",
                                 subtitle: "Produto 3 subtitle",
-                                image_url: SERVER_URL + "/assets/pizza3.jpg",
+                                image_url: SERVER_URL + "/assets/pizza4.jpg",
                                 buttons: [
                                     {
                                         type: "postback",
