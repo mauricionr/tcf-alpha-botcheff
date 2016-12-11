@@ -149,7 +149,7 @@ app.post('/masterpass', function(req, res) {
     
     client.payment.create({
         amount : "1000",
-        token : req,body,simplifyToken,
+        token : req.body.simplifyToken,
         description : "payment description",
         reference : "7a6ef6be31",
         currency : "USD"
