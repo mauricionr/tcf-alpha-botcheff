@@ -131,6 +131,11 @@ app.get('/masterpass', function(req, res) {
     res.sendFile(path.join(__dirname, './', 'masterpass.html'))
 })
 
+app.post('/masterpass', function(req, res) {
+    console.log(JSON.stringify('Req: ', req.body))
+    res.sendStatus(200)
+})
+
 app.post('/simplify_auth', function(req, res) {
     console.log('Auth callback from simplify_auth.......')
     res.sendStatus(200)
