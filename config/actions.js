@@ -176,7 +176,8 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Aperitivos",                                
+                                title: "Aperitivos",
+                                subtitle:'Experimente nosso Pãozinho de Calabresa!',                                
                                 image_url: SERVER_URL + "/assets/aperitivos.jpg",
                                 buttons: [{
                                     type: "postback",
@@ -191,6 +192,7 @@ module.exports = {
                             },
                             {
                                 title: "Bebidas",
+                                subtitle:'Temos refil, aproveite!',
                                 image_url: SERVER_URL + "/assets/drinks.png",
                                 buttons: [{
                                     type: "postback",
@@ -204,7 +206,8 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Saladas",               
+                                title: "Saladas",
+                                subtitle:'Quer algo light? Experimente nossas saladas.',             
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -219,7 +222,7 @@ module.exports = {
                             },
                             {
                                 title: "Pizzas",
-                                subtitle: "Pratos subtitle",
+                                subtitle:'Um sabor melhor que o outro. Você não vai se arrepender!',
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -234,7 +237,7 @@ module.exports = {
                             },
                             {
                                 title: "Sobremesas",
-                                subtitle: "Sobremesa subtitle",
+                                subtitle: "Pra fechar com chave de ouro ;)",
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
