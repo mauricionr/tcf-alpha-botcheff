@@ -273,7 +273,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Lombo defumado",
-                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo.",
+                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo. R$35,00",
                                 image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [
                                     {
@@ -290,7 +290,7 @@ module.exports = {
                             },
                             {
                                 title: "Frango com Catupiry",
-                                subtitle: "Filé de frango desfiado temperado e catupity legítimo.",
+                                subtitle: "Filé de frango desfiado temperado e catupity legítimo. R$30,00",
                                 image_url: SERVER_URL + "/assets/pizza2.jpg",
                                 buttons: [
                                     {
@@ -307,7 +307,7 @@ module.exports = {
                             },
                             {
                                 title: "Peperoni",
-                                subtitle: "Mussarela e fatias de peperoni Sadia.",
+                                subtitle: "Mussarela e fatias de peperoni Sadia. R$32,00",
                                 image_url: SERVER_URL + "/assets/pizza4.jpg",
                                 buttons: [
                                     {
@@ -376,7 +376,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Lombo defumado",
-                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo.",
+                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo. R$35,00",
                                 image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [
                                     {
