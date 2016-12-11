@@ -178,7 +178,7 @@ module.exports = {
                             {
                                 title: "Aperitivos",
                                 subtitle: "Aperitivos subtitle",
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/aperitivos.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver menu",
@@ -193,7 +193,7 @@ module.exports = {
                             {
                                 title: "Bebidas",
                                 subtitle: "Bebidas subtitle",
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/drinks.png",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver menu",
