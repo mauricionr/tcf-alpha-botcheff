@@ -177,7 +177,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Aperitivos",
-                                subtitle:'Experimente nossa onion ring!',                                
+                                subtitle:'Experimente nosso breadsticks!',                                
                                 image_url: SERVER_URL + "/assets/aperitivo.jpg",
                                 buttons: [{
                                     type: "postback",
