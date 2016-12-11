@@ -85,6 +85,14 @@ app.post('/webhook/', function (req, res) {
                 case actions.constants.BUY_PRODUCTS:
                     callSendAPI(actions.checkout(sender));
                 break;
+                case actions.constants.CHEGUEI:
+                    callSendAPI(actions.textMessage(sender, `Ok, seu pedido esta sendo preparado, sua senha é ${Date.now()}`))
+                        .then(() => {
+                            setTimeout(() => {
+                                callSendAPI(actions.textMessage(sender, `Seu pedido esta pronto, porfavor retirar no balcão`))
+                            }, 15000)
+                        })
+                break;
             }
 			continue
 		}

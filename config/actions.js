@@ -11,7 +11,8 @@ const constants = {
     CHAT:'CHAT',
     VIEW_CART:'VIEW',
     REMOVEPRODUTO:'REMOVEPRODUTO',
-    BUY_PRODUCTS:'BUY'
+    BUY_PRODUCTS:'BUY',
+    CHEGUEI:'CHEGUEI'
 }
 
 module.exports = {

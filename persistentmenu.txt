@@ -21,6 +21,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
       "type":"postback",
       "title":"Converse com um humano",
       "payload":"CHAT_WITH_HUMAN"
+    },
+    {
+      "type":"postback",
+      "title":"Cheguei",
+      "payload":"CHEGUEI"
     }
   ]
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAFd8BpSnYUBAPUFfBeOZAvqout3PFYnvkR7JNUAnrQHFN7BV1quUuathHYTnssCyXWGn6RhN8k2QzlQQ75XU0MbkIY7Wi4zkmFgH11wxyHCzfuRV0bSoBNembaThwBWDyhRVcPyiNYIif5Fj21ZAPY3wKM56charb15VqFwZDZD"    
