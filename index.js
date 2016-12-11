@@ -90,7 +90,7 @@ app.post('/webhook/', function (req, res) {
                         .then(() => {
                             setTimeout(() => {
                                 callSendAPI(actions.textMessage(sender, `Seu pedido esta pronto, porfavor retirar no balcão`))
-                            }, 15000)
+                            }, 1500)
                         })
                 break;
             }
