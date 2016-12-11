@@ -28,8 +28,10 @@ app.post('/webhook/', function (req, res) {
         console.log('Users : ', users)
 
 		if (event.message && event.message.text) {
-            callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
-                callSendAPI(actions.categorias(sender))
+             callSendAPI(actions.textMessage(sender, 'Olá meu querido! Hum, imagino que esteja faminto e estou aqui para ajudar ;).')).then(() => {
+                callSendAPI(actions.textMessage(sender, 'O que você quer comer hoje?')).then(() => {
+                    callSendAPI(actions.categorias(sender))
+                })
             })
 		}
 		if (event.postback) {
