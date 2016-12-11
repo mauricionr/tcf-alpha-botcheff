@@ -49,9 +49,7 @@ app.post('/webhook/', function (req, res) {
                     })
                 break;
                 case actions.constants.CATEGORIA:
-                    callSendAPI(actions.textMessage(sender, 'Ótimo, já vou dar as opções. Mas antes, como você prefere que eu liste?')).then(() => {
-                        callSendAPI(actions.ordem(sender));
-                    })
+                    callSendAPI(actions.ordem(sender));
                 break;
                 case actions.constants.ORDEM:
                     callSendAPI(actions.textMessage(sender, 'Perfeito! Aqui estão as opções:')).then(() => {

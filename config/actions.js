@@ -74,59 +74,33 @@ module.exports = {
             recipient: {
                 id: recipientId
             },
-            message: {
+                message: {
                 attachment: {
                     type: "template",
                     payload: {
-                    template_type: "generic",
-                    elements: [
+                    template_type: "button",
+                    text: 'Ótimo, já vou dar as opções. Mas antes, como você prefere que eu liste?',
+                    buttons:[
                             {
-                                title: "Pelo menor preço",               
-                                image_url: SERVER_URL + "/assets/touch.png",
-                                buttons: [{
-                                    type: "postback",
-                                    title: "Ir",
-                                    payload: "ORDEM_PRECO",
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Voltar",
-                                    payload: "INICIO_"
-                                }]
-                            },
+                                type: "postback",
+                                title: "Pelo menor preço",
+                                payload: "ORDEM_PRECO",
+                            }, 
                             {
-                                title: "Mais próximos a mim",               
-                                image_url: SERVER_URL + "/assets/touch.png",
-                                buttons: [{
-                                    type: "postback",
-                                    title: "Ir",
-                                    payload: "ORDEM_LOCALIZACAO",
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Voltar",
-                                    payload: "INICIO_"
-                                }]
-                            },
+                                type: "postback",
+                                title: "Mais próximos a mim",
+                                payload: "ORDEM_LOCALIZACAO",
+                            }, 
                             {
-                                title: "Melhores avaliados",               
-                                image_url: SERVER_URL + "/assets/touch.png",
-                                buttons: [{
-                                    type: "postback",
-                                    title: "Ir",
-                                    payload: "ORDEM_AVALIACAO",
-                                },
-                                {
-                                    type: "postback",
-                                    title: "Voltar",
-                                    payload: "INICIO_"
-                                }]
+                                type: "postback",
+                                title: "Melhores avaliados",
+                                payload: "ORDEM_AVALIACAO",
                             }
                         ]
                     }
                 }
             }
-        }
+        }        
     },
     restaurantes(recipientId){
         return {
