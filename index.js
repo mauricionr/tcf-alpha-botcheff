@@ -69,6 +69,9 @@ app.post('/webhook/', function (req, res) {
                         })
                     })
                 break
+                case actions.constants.VIEW_CART:
+                    callSendAPI(actions.carrinho(sender))
+                break;
             }
 			continue
 		}

@@ -8,7 +8,8 @@ const constants = {
     ITEMMENU:'ITEMMENU',
     INICIO:'INICIO',
     ADDPRODUTO:'ADDPRODUTO',
-    CHAT:'CHAT'
+    CHAT:'CHAT',
+    VIEW_CART:'VIEW'
 }
 
 module.exports = {
@@ -318,6 +319,40 @@ module.exports = {
                                     }
                                 ]
                             }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    carrinho(recipientId){
+        return {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                attachment: {
+                    type: "template",
+                    payload: {
+                    template_type: "generic",
+                    elements: [
+                            {
+                                title: "Lombo defumado",
+                                subtitle: "Lombo defumado, pimentões, cebola e catupiry legítimo.",
+                                image_url: SERVER_URL + "/assets/pizza1.jpg",
+                                buttons: [
+                                    {
+                                        type: "postback",
+                                        title: "Adicionar ao carrinho",
+                                        payload: "ADDPRODUTO_1",
+                                    },
+                                    {
+                                        type: "postback",
+                                        title: "Voltar",
+                                        payload: "RESTAURANTE_1",
+                                    }
+                                ]
+                            }                            
                         ]
                     }
                 }
