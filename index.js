@@ -19,13 +19,9 @@ app.post('/webhook/', function (req, res) {
 	let messaging_events = req.body.entry[0].messaging    
     
 	for (let i = 0; i < messaging_events.length; i++) {
-		let event = req.body.entry[0].messaging[i]
-        console.log('Event: ', event)
-        let userId = event.sender.id;
+		let event = req.body.entry[0].messaging[i]    
 		let sender = event.sender.message_id
-
-        users[userId] = users[userId] || {};
-        users[userId][carrinho] = users[userId][carrinho] || [] 
+        console.log('Sender: ', sender)
 
 		if (event.message && event.message.text) {
             callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
@@ -33,7 +29,7 @@ app.post('/webhook/', function (req, res) {
             })
 		}
 		if (event.postback) {
-            console.log(event);
+            console.log('Event: ', event);
 			let text = JSON.stringify(event.postback)
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
