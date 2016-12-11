@@ -1,6 +1,6 @@
 (function($){
-    debugger
     function simplifyResponseHandler(data) {
+        debugger
         var $paymentForm = $("#simplify-payment-form");
         // Remove all previous errors
         $(".error").remove();
@@ -30,6 +30,7 @@
         }
     }
     function masterPassResponseHandler(data, status) {
+        debugger
         var $paymentForm = $("#simplify-payment-form");
         // Remove all previous errors
         $(".error").remove();
@@ -65,6 +66,7 @@
 
     $(document).ready(function() {
         $("#simplify-payment-form").on("submit", function() {
+            debugger
             // Disable the submit button
             $("#process-payment-btn").attr("disabled", "disabled");
             // Generate a card token & handle the response
