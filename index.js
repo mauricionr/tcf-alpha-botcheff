@@ -19,8 +19,7 @@ app.post('/webhook/', function (req, res) {
     console.log('Body: \n', JSON.stringify(req.body))
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
-		let sender = event.sender.message_id
-             
+		let sender = event.sender.id        
 		if (event.message && event.message.text) {
             callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
                 callSendAPI(actions.categorias(sender))
