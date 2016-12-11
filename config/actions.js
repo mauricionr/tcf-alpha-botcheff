@@ -38,7 +38,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Pizza",               
-                                image_url: SERVER_URL + "/assets/respizza.png",
+                                image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "É isso mesmo",
@@ -114,9 +114,9 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Restaurante 1",
+                                title: "Quero + Pizza",
                                 subtitle: "Rua xpto 32",
-                                image_url: SERVER_URL + "/assets/pizza1.jpg",
+                                image_url: SERVER_URL + "/assets/respizza.png",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver categorias",
