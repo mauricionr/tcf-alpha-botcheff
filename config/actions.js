@@ -347,17 +347,15 @@ module.exports = {
                                         type: "postback",
                                         title: "Remover do carrinho",
                                         payload: "REMOVEPRODUTO_1",
+                                    },
+                                    {
+                                        "type":"web_url",
+                                        "url":"https://petersfancyapparel.com/criteria_selector",
+                                        "title":"Select Criteria",
+                                        "webview_height_ratio": "compact"
                                     }
                                 ]
                             }                            
-                        ],
-                         "buttons":[
-                            {
-                                "type":"web_url",
-                                "url":"https://petersfancyapparel.com/criteria_selector",
-                                "title":"Select Criteria",
-                                "webview_height_ratio": "compact"
-                            }
                         ]
                     }
                 }
@@ -384,18 +382,16 @@ module.exports = {
                                         type: "postback",
                                         title: "Remover do carrinho",
                                         payload: "REMOVEPRODUTO_1",
+                                    },
+                                    {
+                                        "type":"web_url",
+                                        "url":"https://petersfancyapparel.com/criteria_selector",
+                                        "title":"Select Criteria",
+                                        "webview_height_ratio": "compact"
                                     }
                                 ]
                             }                            
                         ],
-                        "buttons":[
-                            {
-                                "type":"web_url",
-                                "url":"https://petersfancyapparel.com/criteria_selector",
-                                "title":"Select Criteria",
-                                "webview_height_ratio": "compact"
-                            }
-                        ]
                     }
                 }
             }
