@@ -38,7 +38,7 @@ module.exports = {
                     elements: [
                             {
                                 title: "Pizza",               
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/pizza1.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "É isso mesmo",
