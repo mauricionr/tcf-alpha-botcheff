@@ -56,10 +56,11 @@ app.post('/webhook/', function (req, res) {
                         callSendAPI(actions.restaurantes(sender))
                     })
                 break;
-                case actions.constants.RESTAURANTE:
-                    callSendAPI(actions.menu(sender))
-                break;
+                //case actions.constants.RESTAURANTE:
+                //    callSendAPI(actions.menu(sender))
+                //break;
                 case actions.constants.ITEMMENU:
+                case actions.constants.RESTAURANTE:
                     callSendAPI(actions.produtos(sender))
                 break;
                 case actions.constants.ADDPRODUTO:
