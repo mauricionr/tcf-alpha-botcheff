@@ -208,7 +208,7 @@ module.exports = {
                             {
                                 title: "Saladas",
                                 subtitle:'Quer algo light? Experimente nossas saladas.',             
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/salada.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver menu",
@@ -223,7 +223,7 @@ module.exports = {
                             {
                                 title: "Pizzas",
                                 subtitle:'Um sabor melhor que o outro. Você não vai se arrepender!',
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/pizza5.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver menu",
@@ -238,7 +238,7 @@ module.exports = {
                             {
                                 title: "Sobremesas",
                                 subtitle: "Pra fechar com chave de ouro ;)",
-                                image_url: SERVER_URL + "/assets/touch.png",
+                                image_url: SERVER_URL + "/assets/sobremesa.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Ver menu",
