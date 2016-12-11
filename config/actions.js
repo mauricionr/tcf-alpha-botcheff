@@ -283,7 +283,7 @@ module.exports = {
                                     {
                                         type: "postback",
                                         title: "Voltar",
-                                        payload: "RESTAURANTE_1",
+                                        payload: "ORDEM_PRECO",
                                     }
                                 ]
                             },
@@ -300,7 +300,7 @@ module.exports = {
                                     {
                                         type: "postback",
                                         title: "Voltar",
-                                        payload: "RESTAURANTE_1",
+                                        payload: "ORDEM_PRECO",
                                     }
                                 ]
                             },
@@ -317,7 +317,7 @@ module.exports = {
                                     {
                                         type: "postback",
                                         title: "Voltar",
-                                        payload: "RESTAURANTE_1",
+                                        payload: "ORDEM_PRECO",
                                     }
                                 ]
                             }
