@@ -351,7 +351,7 @@ module.exports = {
                                     {
                                         "type":"web_url",
                                         "url":"https://petersfancyapparel.com/criteria_selector",
-                                        "title":"Select Criteria",
+                                        "title":"Efetuar o pagamento",
                                         "webview_height_ratio": "compact"
                                     }
                                 ]
@@ -386,7 +386,7 @@ module.exports = {
                                     {
                                         "type":"web_url",
                                         "url":"https://petersfancyapparel.com/criteria_selector",
-                                        "title":"Select Criteria",
+                                        "title":"Efetuar o pagamento",
                                         "webview_height_ratio": "compact"
                                     }
                                 ]
