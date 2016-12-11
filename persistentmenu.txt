@@ -4,6 +4,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "call_to_actions":[
     {
       "type":"postback",
+      "title":"Início",
+      "payload":"INICIO"
+    },
+    {
+      "type":"postback",
       "title":"Finalizar compra",
       "payload":"BUY_PRODUCTS"
     },
