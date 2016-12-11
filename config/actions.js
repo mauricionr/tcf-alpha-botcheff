@@ -347,11 +347,6 @@ module.exports = {
                                         type: "postback",
                                         title: "Remover do carrinho",
                                         payload: "REMOVEPRODUTO_1",
-                                    },
-                                    {
-                                        type: "postback",
-                                        title: "Voltar",
-                                        payload: "RESTAURANTE_1",
                                     }
                                 ]
                             }                            
