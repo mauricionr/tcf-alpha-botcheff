@@ -91,8 +91,6 @@ app.post('/webhook/', function (req, res) {
 	res.sendStatus(200);
 })
 
-
-
 /*
  * Call the Send API. The message data goes in the body. If successful, we'll 
  * get the message id in a response 
@@ -133,6 +131,27 @@ app.get('/masterpass', function(req, res) {
 
 app.post('/masterpass', function(req, res) {
     console.log(JSON.stringify('Req: ', req.body))
+    console.log('Pagando.....')
+    let Simplify = require("simplify-commerce"),
+        client = Simplify.getClient({
+            publicKey: 'sbpb_MGMyNzFiOWEtMTFiZi00ZmM0LTkwOWUtZTc1OGFkMmMzOTFj',
+            privateKey: 'uwh3lg1MacfYBUPx4U6FB6Y4LQlVAjtsH//+4L7JAMd5YFFQL0ODSXAOkNtXTToq'
+        });
+    
+    client.payment.create({
+        amount : "1000",
+        token : req,body,simplifyToken,
+        description : "payment description",
+        reference : "7a6ef6be31",
+        currency : "USD"
+    }, function(errData, data){
+        if(errData){
+            console.error("Simplify Error Message: " + errData.data.error.message);
+            // handle the error
+            return;
+        }
+        console.log("Simplify Payment Status: " + data.paymentStatus);
+    });
     res.sendStatus(200)
 })
 
