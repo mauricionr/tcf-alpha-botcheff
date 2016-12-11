@@ -37,17 +37,19 @@ app.post('/webhook/', function (req, res) {
             let currentStep = event.postback.payload.split('_')[0];
 			switch(currentStep){
                 case actions.contants.INICIO:
-                    callSendAPI(actions.textMessage(sender, 'O que deseja comer hoje?')).then(() => {
+                    callSendAPI(actions.textMessage(sender, 'O que você quer comer hoje?')).then(() => {
                         callSendAPI(actions.categorias(sender))
                     })
                 break;
                 case actions.contants.CATEGORIA:
-                    callSendAPI(actions.textMessage(sender, 'Como deseja buscar?')).then(() => {
+                    callSendAPI(actions.textMessage(sender, 'Ótimo, já vou dar as opções. Mas antes, como você prefere que eu liste?')).then(() => {
                         callSendAPI(actions.ordem(sender));
                     })
                 break;
                 case actions.contants.ORDEM:
-                    callSendAPI(actions.restaurantes(sender))
+                    callSendAPI(actions.textMessage(sender, 'Perfeito! Aqui estão as opções:')).then(() => {
+                        callSendAPI(actions.restaurantes(sender))
+                    })
                 break;
                 case actions.contants.RESTAURANTE:
                     callSendAPI(actions.menu(sender))

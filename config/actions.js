@@ -80,7 +80,7 @@ module.exports = {
                     template_type: "generic",
                     elements: [
                             {
-                                title: "Preço",               
+                                title: "Pelo menor preço",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -94,7 +94,7 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Localização",               
+                                title: "Mais próximos a mim",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -108,7 +108,7 @@ module.exports = {
                                 }]
                             },
                             {
-                                title: "Avaliação",               
+                                title: "Melhores avaliados",               
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
@@ -145,7 +145,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver menu",
+                                    title: "Ver categorias",
                                     payload: "RESTAURANTE_1",
                                 },
                                 {
@@ -161,7 +161,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver menu",
+                                    title: "Ver categorias",
                                     payload: "RESTAURANTE_2",
                                 },
                                 {
@@ -177,7 +177,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver menu",
+                                    title: "Ver categorias",
                                     payload: "RESTAURANTE_3",
                                 },
                                 {
@@ -210,7 +210,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver opções",
+                                    title: "Ver menu",
                                     payload: "ITEMMENU_1",
                                 },
                                 {
@@ -226,7 +226,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver opções",
+                                    title: "Ver menu",
                                     payload: "ITEMMENU_2",
                                 },
                                 {
@@ -242,7 +242,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver opções",
+                                    title: "Ver menu",
                                     payload: "ITEMMENU_3",
                                 },
                                 {
@@ -258,7 +258,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver opções",
+                                    title: "Ver menu",
                                     payload: "ITEMMENU_4",
                                 },
                                 {
@@ -274,7 +274,7 @@ module.exports = {
                                 image_url: SERVER_URL + "/assets/touch.png",
                                 buttons: [{
                                     type: "postback",
-                                    title: "Ver opções",
+                                    title: "Ver menu",
                                     payload: "ITEMMENU_5",
                                 },
                                 {
